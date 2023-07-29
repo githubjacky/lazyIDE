@@ -88,7 +88,6 @@ return {
           { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
-
           { name = "otter" },
           { name = "nvim_lsp_signature_help" },
           { name = "calc" },

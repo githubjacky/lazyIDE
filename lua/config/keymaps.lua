@@ -43,7 +43,7 @@ map("n", "<leader>ctt", "<cmd>split term://$SHELL<cr>", { desc = "new terminal b
 map("n", "<leader>ctr", "<cmd>split term://R<cr>", { desc = "new R repl below" })
 map("n", "<leader>ctp", "<cmd>split term://python<cr>", { desc = "new Python repl below" })
 map("n", "<leader>cti", "<cmd>split term://ipython<cr>", { desc = "new IPython repl below" })
-map("n", "<leader>ctj", "<cmd>split term://julia<cr>", { desc = "new Julia repl below" })
+map("n", "<leader>ctj", "<cmd>split term://julia --project=.<cr>", { desc = "new Julia repl below" })
 map("n", "<leader>cts", "<cmd>split term://stata-se<cr>", { desc = "new StataSE 16.0 console below" })
 --
 -- code block
@@ -58,6 +58,9 @@ map("n", "<leader>cbS", "o```{sql}<cr>```<esc>O", { desc = "SQL code block" })
 local Util = require("lazyvim.util")
 map("n", "<leader>cy", "<cmd>Lazy<cr>", { desc = "Lazy" })
 map("n", "<leader>cL", Util.changelog, { desc = "LazyVim Changelog" })
+
+map("n", "<leader>cs", "<cmd>SlimeSendCurrentLine<cr>", { desc = "send code to terminal via vim slime" })
+map("v", "<leader>cs", "<cmd>SlimeSend<cr>", { desc = "send code to terminal via vim slime" })
 
 -- terminal
 map("t", "<c-j>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
