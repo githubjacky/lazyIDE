@@ -3,7 +3,7 @@
 -- Add any additional keymaps here
 
 local function map(mode, lhs, rhs, opts)
-  vim.keymap.set(mode, lhs, rhs, opts)
+    vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 local opt = { noremap = true }
@@ -16,6 +16,12 @@ map("n", "<Tab>", "$", opt)
 map("n", "<S-Tab>", "0", opt)
 map("v", "<Tab>", "$", opt)
 map("v", "<S-Tab>", "0", opt)
+
+-- resize the window
+map("n", "<C-S-Up>", "<cmd>resize +2<cr>", opt)
+map("n", "<C-S-Down>", "<cmd>resize -2<cr>", opt)
+map("n", "<C-S-Left>", "<cmd>vertical resize +2<cr>", opt)
+map("n", "<C-S-Right>", "<cmd>vertical resize -2<cr>", opt)
 
 -- intent
 map("n", ">", "a<C-t><Esc>", opt)
@@ -33,9 +39,9 @@ map("n", "<leader>w", "<cmd>w<cr>", { desc = "Save" })
 
 -- modify which key
 require("which-key").register({
-  ["<leader>"] = {
-    t = { name = "+terminal" },
-  },
+    ["<leader>"] = {
+        t = { name = "+terminal" },
+    },
 })
 
 -- repl
