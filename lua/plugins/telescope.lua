@@ -143,7 +143,7 @@ return {
         keys = {
             {
                 "<leader>sB",
-                "<cmd>Telescope file_browser path=~/github<cr> hidden=false",
+                "<cmd>Telescope file_browser path=/Users/jacky/github<cr> hidden=false",
                 desc = "File Browser",
             },
         },
