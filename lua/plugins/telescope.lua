@@ -24,7 +24,7 @@ return {
 
             -- files
             { "<leader>ff", Util.telescope("files"), desc = "Find Files (root dir)" },
-            { "<leader>fF", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+            -- { "<leader>fF", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
             { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
             { "<leader>fR", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
 
@@ -143,7 +143,7 @@ return {
         keys = {
             {
                 "<leader>sB",
-                "<cmd>Telescope file_browser path=/Users/jacky/github<cr> hidden=false",
+                "<cmd>Telescope file_browser path=/Users/jackyyeh/github<cr> hidden=false",
                 desc = "File Browser",
             },
         },
