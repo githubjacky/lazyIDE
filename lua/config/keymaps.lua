@@ -6,6 +6,7 @@
 require("which-key").register({
     ["<leader>"] = {
         cs = { name = "+code spnippets" },
+        o = { name = "+obsidian" },
     },
 })
 
@@ -42,6 +43,13 @@ map("v", "<leader>/", "gc", { remap = true, desc = "block comment" })
 
 -- save
 map("n", "<leader>w", "<cmd>w<cr>", { desc = "Save" })
+
+-- obsidian
+map("n", "<leader>os", "<cmd>ObsidianSearch<cr>", { desc = "search" })
+map("n", "<leader>on", "<cmd>ObsidianToday<cr>", { desc = "today" })
+map("n", "<leader>of", "<cmd>ObsidianFollowLink<cr>", { desc = "follow link" })
+map("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "backlinks" })
+map("n", "<leader>ot", "<cmd>ObsidianTemplate<cr>", { desc = "template" })
 
 -- repl
 -- map("n", "<leader>ctt", "<cmd>split term://$SHELL<cr>", { desc = "new terminal below" })

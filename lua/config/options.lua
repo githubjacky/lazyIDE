@@ -19,3 +19,4 @@ vim.opt.foldmethod = "expr"
 vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 -- but open all by default
 vim.opt.foldlevel = 99
+

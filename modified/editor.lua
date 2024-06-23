@@ -308,7 +308,7 @@ If you rather use leap/flit instead, you can add the leap extra:
                 ["<leader>s"] = { name = "+search" },
                 ["<leader>f"] = { name = "+find files" },
                 ["<leader>u"] = { name = "+ui" },
-                --   ["<leader>w"] = { name = "+windows" },
+                -- ["<leader>w"] = { name = "+windows" },
                 ["<leader>x"] = { name = "+diagnostics/quickfix" },
             },
         },

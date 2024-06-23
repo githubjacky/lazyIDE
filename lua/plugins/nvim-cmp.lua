@@ -25,6 +25,7 @@ return {
             "L3MON4D3/LuaSnip",
             "rafamadriz/friendly-snippets",
             "onsails/lspkind-nvim",
+            "micangl/cmp-vimtex",
             { "petertriho/cmp-git", opts = {} },
         },
         opts = function()
@@ -85,8 +86,9 @@ return {
                     end, { "i", "s" }),
                 }),
                 sources = cmp.config.sources({
-                    { name = "luasnip" },
                     { name = "nvim_lsp" },
+                    { name = "luasnip" },
+                    { name = "vimtex" },
                     { name = "buffer" },
                     { name = "path" },
                     { name = "otter" },
@@ -100,7 +102,6 @@ return {
                     { name = "friendly_snippets" },
                     { name = "lspkind_nvim" },
                     { name = "git" },
-                    { name = "vimtex" },
                 }),
                 formatting = {
                     format = function(_, item)
